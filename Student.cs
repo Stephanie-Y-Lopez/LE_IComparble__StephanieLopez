@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LE_IComparble__StephanieLopez
 {
-    internal class Student
+    public class Student : IComparable<Student>
     {
         //Fields
         public string _Firstname;
@@ -29,6 +29,18 @@ namespace LE_IComparble__StephanieLopez
         public string LastName { get => _Lastname; set => _Lastname = value; }
         public double CSIGrade { get => _Csigrade; set => _Csigrade = value; }
         public double GenEdGrade { get => _Genedgrade; set => _Genedgrade = value; }
+
+        public int CompareTo(Student other)
+        {
+            //What I write here will determine the order of how things are sorted.
+            //I have now organized from highest CSI grade to lowest grade.(Descending order)
+            //if (this._Csigrade < other._Csigrade) return 1;
+            //else if (this._Csigrade > other._Csigrade) return -1;
+            //else return 0;
+
+            return _Firstname.CompareTo(other.FirstName);
+            //The field I chose to sort by by default is First Name descending order.
+        }
 
         public override string ToString()
         {

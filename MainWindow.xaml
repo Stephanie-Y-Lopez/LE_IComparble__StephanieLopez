@@ -12,37 +12,65 @@
     <Canvas
         Background="#FFECB2E9">
         <Button
-            Content="Button"
+            x:Name="B_Name"
+            Content="Sort By Name"
             Canvas.Left="161"
-            Canvas.Top="131"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Width="159"
-            Height="30" />
-        <Button
-            Content="Button"
-            Canvas.Left="161"
-            Canvas.Top="305"
+            Canvas.Top="117"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Width="159"
-            Height="30" />
+            Height="30"
+            Click="B_Name_Click" />
         <Button
-            Content="Button"
+            x:Name="B_GenEd"
+            Content="Sort By Gen Ed grade"
             Canvas.Left="161"
-            Canvas.Top="217"
+            Canvas.Top="248"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Width="159"
-            Height="30" />
+            Height="30"
+            Click="B_GenEd_Click" />
+        <Button
+            x:Name="B_CSI"
+            Content="Sort By CSI Grade"
+            Canvas.Left="161"
+            Canvas.Top="182"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Width="159"
+            Height="30"
+            Click="B_CSI_Click" />
         <ListBox
+            x:Name="Lb_Student"
             Height="353"
-            Width="326"
+            Width="344"
             d:ItemsSource="{d:SampleData ItemCount=5}"
             Canvas.Left="417"
             Canvas.Top="41"
             HorizontalAlignment="Left"
             VerticalAlignment="Center" />
+        <RadioButton
+            x:Name="RB_ASD"
+            Content="Ascending"
+            Canvas.Left="198"
+            Canvas.Top="314"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Height="20"
+            Width="95" />
+        <RadioButton
+            x:Name="RB_DSC"
+            Content="Descending"
+            Canvas.Left="198"
+            Canvas.Top="340" />
+        <GroupBox
+            x:Name="GB_Order"
+            Height="81"
+            Header="Order of Gen Ed Grade"
+            Width="145"
+            Canvas.Left="168"
+            Canvas.Top="293" />
 
     </Canvas>
 </Window>
